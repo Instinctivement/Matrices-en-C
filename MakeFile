@@ -1,0 +1,20 @@
+prog : file.o array.o matrix.o controller.o main.o
+	gcc file.o array.o matrix.o controller.o main.o -o prog
+
+main.o : main.c
+	gcc -c -Wall main.c
+
+file.o : file.c
+	gcc -c -Wall file.c
+
+array.o : array.c
+	gcc -c -Wall array.c
+
+matrix.o : matrix.c
+	gcc -c -Wall matrix.c
+
+controller.o : controller.c
+	gcc -c -Wall controller.c
+
+clean :
+	rm -f *.o prog
