@@ -15,7 +15,8 @@ void app()
     fill_matrix(&m1);
     // Affichage de la matrice
     show_matrix(&m1);
+    
     // Libérez la mémoire allouée pour de la matrice
     free_matrix(&m1);
-    
+
 }
