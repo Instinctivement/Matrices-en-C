@@ -8,8 +8,7 @@
 
 void app()
 {   
-    /* 
-    t_matrice m1 = {0, 0, NULL};
+    /*t_matrice m1 = {0, 0, NULL};
 
     // Creation de la matrice
     create_matrix(&m1);
@@ -21,7 +20,7 @@ void app()
     // Libérez la mémoire allouée pour de la matrice
     free_matrix(&m1);*/
 
-    const char* filename = "test.txt";
+    /*const char* filename = "test.txt";
     const char* destination_filename = "test_copy.txt";
     char* content = read_file(filename);
     if (content) {
@@ -38,6 +37,18 @@ void app()
     result = copy_file(filename, destination_filename);
     if (!result) {
         printf("Copie du contenu de %s vers %s réussie\n", filename, destination_filename);
-    }
+    }*/
 
+    t_matrice m;
+    char filename[] = "test.txt"; // nom du fichier contenant la matrice
+
+    // Lecture de la matrice à partir du fichier
+    read_matrix_from_file(filename, &m);
+
+    // Affichage de la matrice
+    printf("Matrice lue à partir du fichier %s :\n", filename);
+    show_matrix(&m);
+
+    // Libération de la mémoire allouée pour la matrice
+    free_matrix(&m);
 }

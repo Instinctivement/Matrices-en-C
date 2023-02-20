@@ -3,6 +3,7 @@
 
 #include "files.h"
 
+
 /*
     fopen(<fichier>, <mode_ouverture>) : r  (lecture seule, doit exister)
                                          w  (écriture seule)
@@ -97,3 +98,4 @@ int copy_file(const char* source_filename, const char* destination_filename) {
 
     return 0;
 }
+
