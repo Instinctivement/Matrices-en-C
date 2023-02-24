@@ -99,3 +99,24 @@ int copy_file(const char* source_filename, const char* destination_filename) {
     return 0;
 }
 
+
+void file_test(){
+    const char* filename = "test.txt";
+    const char* destination_filename = "test_copy.txt";
+    char* content = read_file(filename);
+    if (content) {
+        printf("Contenu du fichier %s : %s\n", filename, content);
+        free(content);
+    }
+
+    const char* new_content = "Nouveau contenu pour le fichier test.txt\n";
+    int result = write_file(filename, new_content);
+    if (!result) {
+        printf("Contenu du fichier %s modifié avec succès\n", filename);
+    }
+
+    result = copy_file(filename, destination_filename);
+    if (!result) {
+        printf("Copie du contenu de %s vers %s réussie\n", filename, destination_filename);
+    }
+}
